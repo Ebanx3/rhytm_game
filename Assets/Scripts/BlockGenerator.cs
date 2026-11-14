@@ -38,7 +38,13 @@ public class BlockGenerator : MonoBehaviour
                     pressedKey.text = key.name;
                 }
             }
-            
+
+
+            if (blocks.Length == 0 || blocks[0].GetIsLocked())
+            {
+                return;
+            }
+
             int currentBlockValue = blocks[0].GetValue();
 
             for (int i = 0; i <= 9; i++)
