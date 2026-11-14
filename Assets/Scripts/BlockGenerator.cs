@@ -1,8 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using TMPro;
-using UnityEngine.InputSystem.Controls;
 
 public class BlockGenerator : MonoBehaviour
 {
@@ -10,12 +7,10 @@ public class BlockGenerator : MonoBehaviour
     [SerializeField] private GameObject numberPrefab;
     [SerializeField] private float blockSpawnSpeed;
 
-    [SerializeField] private TextMeshProUGUI pressedKey;
+    float width;
+    float height;
 
-    [SerializeField] float width;
-    [SerializeField] float height;
-
-    private NumberBlock[] blocks;
+    public NumberBlock[] blocks;
 
     void Start()
     {
@@ -28,47 +23,12 @@ public class BlockGenerator : MonoBehaviour
     void Update()
     {
         blocks = GetComponentsInChildren<NumberBlock>();
-
-        if (Keyboard.current.anyKey.wasPressedThisFrame)
-        {
-            foreach (KeyControl key in Keyboard.current.allKeys)
-            {
-                if (key.wasPressedThisFrame)
-                {
-                    pressedKey.text = key.name;
-                }
-            }
-
-
-            if (blocks.Length == 0 || blocks[0].GetIsLocked())
-            {
-                return;
-            }
-
-            int currentBlockValue = blocks[0].GetValue();
-
-            for (int i = 0; i <= 9; i++)
-            {
-                if (Keyboard.current[Key.Digit0 + i].wasPressedThisFrame)
-                {
-                    if (currentBlockValue == i)
-                    {
-                        Debug.Log("¡Número correcto!");
-                        blocks[0].DestroyGO();
-                    }
-                    else
-                    {
-                        Debug.Log("Número incorrecto");
-                    }
-                }
-            }
-        }
     }
 
     void SpawnBlock()
     {
         int randomValue = Random.Range(0, 10);
-        bool isLocked = Random.Range(0, 2) == 0;
+        bool isLocked = Random.Range(0, 3) == 0;
 
         GameObject obj = Instantiate(numberPrefab, canvas);
         NumberBlock nb = obj.GetComponent<NumberBlock>();
@@ -90,10 +50,10 @@ public class BlockGenerator : MonoBehaviour
 
     IEnumerator HandleSpawns()
     {
-        int numberAmount = 10;
+        int numberAmount = 30;
         while (numberAmount > 0)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSecondsRealtime(blockSpawnSpeed);
             SpawnBlock();
             numberAmount--;
         }

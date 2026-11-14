@@ -234,7 +234,7 @@ MonoBehaviour:
   - {fileID: -2423230811885516303, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
   - {fileID: 1211998406744890917, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
   lockButton: {fileID: 3954254933904092216}
-  timeToDisappear: 1
+  timeToDisappear: 1.5
 --- !u!114 &1006677792065944148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,5 +247,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e5b695a62f7544db517ba62ac2a8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAnimation
-  duration: 0.4
-  initialScale: 0.5
+  duration: 0.2
+  initialScale: 0.3
