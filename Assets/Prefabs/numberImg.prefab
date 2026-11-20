@@ -223,7 +223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NumberBlock
   numberSprites:
-  - {fileID: 6155212226941906339, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
   - {fileID: 6128299156075563123, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
   - {fileID: 3386662938922423588, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
   - {fileID: -6110656803992641779, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
@@ -233,8 +232,9 @@ MonoBehaviour:
   - {fileID: -5082647686934749709, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
   - {fileID: -2423230811885516303, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
   - {fileID: 1211998406744890917, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
+  - {fileID: 6155212226941906339, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
   lockButton: {fileID: 3954254933904092216}
-  timeToDisappear: 1.5
+  timeToDisappear: 6
 --- !u!114 &1006677792065944148
 MonoBehaviour:
   m_ObjectHideFlags: 0

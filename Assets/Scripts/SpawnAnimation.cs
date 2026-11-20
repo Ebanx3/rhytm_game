@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using PrimeTween;
 
 public class SpawnAnimation : MonoBehaviour
 {
@@ -18,42 +19,27 @@ public class SpawnAnimation : MonoBehaviour
 
     public void PlayAnimation()
     {
-        StartCoroutine(AnimateSpawn());
+        AnimateSpawn();
     }
 
-    private IEnumerator AnimateSpawn()
+    private void AnimateSpawn()
     {
-        float elapsed = 0f;
-
         Vector3 finalScale = rectTransform.localScale;
 
-        rectTransform.localScale = finalScale * initialScale;
-
-        Color color = image.color;
-        color.a = 0f;
-        image.color = color;
-
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
-
-            float progress = Mathf.Clamp01(elapsed / duration);
-
-            rectTransform.localScale = Vector3.Lerp(
-                finalScale * initialScale,
-                finalScale,
-                progress
-            );
-
-            color.a = progress;
-            image.color = color;
-
-            yield return null;
-        }
-
-        rectTransform.localScale = finalScale;
-
-        color.a = 1f;
-        image.color = color;
+        Sequence.Create()
+            .Group(Tween.Scale(
+               rectTransform,
+               startValue: finalScale * initialScale,
+               endValue: finalScale,
+               duration: duration,
+              ease: Ease.OutCubic
+            ))
+            .Group(Tween.Alpha(
+                image,
+                startValue: 0f,
+                endValue: 1f,
+                duration: duration,
+                ease: Ease.OutCubic
+            ));
     }
 }
