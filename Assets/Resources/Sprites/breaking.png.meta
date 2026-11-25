@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: 57faabdd9fb2dca44bc6da3caaf5dd2b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -383838014632442345
+    second: breaking_0
+  - first:
+      213: -8131216158628527515
+    second: breaking_1
+  - first:
+      213: 7753310123411399193
+    second: breaking_2
+  - first:
+      213: -7830809761810457038
+    second: breaking_3
+  - first:
+      213: 5496364504372827424
+    second: breaking_4
+  - first:
+      213: 7029586446768827738
+    second: breaking_5
+  - first:
+      213: -5484445706854660060
+    second: breaking_6
+  - first:
+      213: -505317034775348636
+    second: breaking_7
+  - first:
+      213: -4363727214205319364
+    second: breaking_8
+  - first:
+      213: 2553113556937887179
+    second: breaking_9
+  - first:
+      213: -8375390562134307569
+    second: breaking_10
+  - first:
+      213: 2156110939034368457
+    second: breaking_11
+  - first:
+      213: 1835077979174309729
+    second: breaking_12
+  - first:
+      213: -6026673232758747756
+    second: breaking_13
+  - first:
+      213: 6423237976481168052
+    second: breaking_14
+  - first:
+      213: -590744404538134433
+    second: breaking_15
+  - first:
+      213: 4372071594489649530
+    second: breaking_16
+  - first:
+      213: 4933133319863101670
+    second: breaking_17
+  - first:
+      213: -1445851759897266899
+    second: breaking_18
+  - first:
+      213: 5209097295572592266
+    second: breaking_19
+  - first:
+      213: -6390368163609681516
+    second: breaking_20
+  - first:
+      213: 272458061644907953
+    second: breaking_21
+  - first:
+      213: -5881210590413500530
+    second: breaking_22
+  - first:
+      213: -4612386604615301267
+    second: breaking_23
+  - first:
+      213: -3473823441354568104
+    second: breaking_24
+  - first:
+      213: -664842420855934750
+    second: breaking_25
+  - first:
+      213: 7894378990577026076
+    second: breaking_26
+  - first:
+      213: -7521426329601786737
+    second: breaking_27
+  - first:
+      213: 7095407963781283872
+    second: breaking_28
+  - first:
+      213: 2936253987724313490
+    second: breaking_29
+  - first:
+      213: -6741700828770930785
+    second: breaking_30
+  - first:
+      213: 303233492540732788
+    second: breaking_31
+  - first:
+      213: -2975564321283812972
+    second: breaking_32
+  - first:
+      213: -8182773131807850648
+    second: breaking_33
+  - first:
+      213: 3079760694750726024
+    second: breaking_34
+  - first:
+      213: -2084657635882944694
+    second: breaking_35
+  - first:
+      213: -1576381447655754888
+    second: breaking_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: breaking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716ca8efb555caaf0800000000000000
+      internalID: -383838014632442345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breaking_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562c7091cfd182f80800000000000000
+      internalID: -8131216158628527515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breaking_2
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 0
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 912606b7a7a499b60800000000000000
+      internalID: 7753310123411399193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breaking_3
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e50a3d200635390800000000000000
+      internalID: -7830809761810457038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breaking_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 025553f4562074c40800000000000000
+      internalID: 5496364504372827424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f5892693b88f23345ba952cc8101f92d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":26.0,"y":26.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      breaking_0: -383838014632442345
+      breaking_1: -8131216158628527515
+      breaking_2: 7753310123411399193
+      breaking_3: -7830809761810457038
+      breaking_4: 5496364504372827424
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,7 +4,7 @@ using UnityEngine;
 public class BlockGenerator : MonoBehaviour
 {
     [SerializeField] private RectTransform canvas;
-    [SerializeField] private GameObject numberPrefab;
+    [SerializeField] private GameObject[] numbersPrefabs;
     [SerializeField] private float blockSpawnSpeed;
 
     private float width;
@@ -47,7 +47,7 @@ public class BlockGenerator : MonoBehaviour
 
         bool isLocked = Random.Range(0, 3) == 0;
 
-        GameObject obj = Instantiate(numberPrefab, canvas);
+        GameObject obj = Instantiate(numbersPrefabs[randomValue], canvas);
 
         NumberBlock nb = obj.GetComponent<NumberBlock>();
 

@@ -3,8 +3,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
-using static Unity.Collections.AllocatorManager;
 
+[RequireComponent(typeof(BlockGenerator))]
 public class Controllers : MonoBehaviour
 {
     private readonly Key[] numberKeys =
@@ -23,27 +23,13 @@ public class Controllers : MonoBehaviour
 
     [SerializeField] Points PointsScript;
 
-    [SerializeField] private GameObject blockGenerator;
+    [SerializeField] private BlockGenerator blockGenerator;
     [SerializeField] private TextMeshProUGUI pressedKey;
 
-    private BlockGenerator generator;
 
     void Start()
     {
-        if (blockGenerator == null)
-        {
-            Debug.LogError("No has asignado BlockGenerator.");
-            enabled = false;
-            return;
-        }
-
-        generator = blockGenerator.GetComponent<BlockGenerator>();
-
-        if (generator == null)
-        {
-            Debug.LogError("El objeto asignado no tiene BlockGenerator.");
-            enabled = false;
-        }
+        blockGenerator = GetComponent<BlockGenerator>();
     }
 
     void Update()
@@ -76,7 +62,7 @@ public class Controllers : MonoBehaviour
 
             Debug.Log($"TECLA PULSADA: {pressedNumber}");
 
-            NumberBlock[] blocks = generator.GetBlocks();
+            NumberBlock[] blocks = blockGenerator.GetBlocks();
 
             foreach (NumberBlock block in blocks)
             {
@@ -96,34 +82,7 @@ public class Controllers : MonoBehaviour
                 {
                     Debug.Log("¡¡COINCIDENCIA!!");
 
-
-
-
-                    Color startColor = block.GetComponent<UnityEngine.UI.Image>().color;
-                    Color endColor = startColor;
-
-                    startColor.a = 1f;
-                    endColor.a = 0f;
-
-                    block.GetComponent<UnityEngine.UI.Image>().color = startColor;
-
-                    Tween.Custom(
-                        startValue: startColor,
-                        endValue: endColor,
-                        duration: 0.4f,
-                        onValueChange: newColor => block.GetComponent<UnityEngine.UI.Image>().color = newColor,
-                        ease: Ease.InOutCubic
-                    );
-                    Tween.Scale(
-                        block.transform,
-                        endValue: new Vector3(2, 2, 2),
-                        duration: 0.4f,
-                        ease: Ease.InOutCubic
-                        ).OnComplete(() =>
-                        {
-                            block.DestroyGO();
-                        });
-                    
+                    block.DestroyGO();
 
                     PointsScript.points += 1;
                 }

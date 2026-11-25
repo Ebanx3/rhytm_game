@@ -6,8 +6,12 @@ using static Unity.Collections.AllocatorManager;
 
 public class NumberBlock : MonoBehaviour
 {
-    [SerializeField] private Sprite[] numberSprites;
+    private static readonly int IdleHash = Animator.StringToHash("idle");
+    private static readonly int BreakTrigger = Animator.StringToHash("break");
+
     [SerializeField] private GameObject lockButton;
+    private Animator animator;
+    private Image image;
 
     [Range(0, 9)]
     private int value;
@@ -25,6 +29,9 @@ public class NumberBlock : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
+        animator.Play(IdleHash,0,0);
+        image = GetComponent<Image>();
         StartCoroutine(DisappearAtTime());
     }
 
@@ -33,8 +40,6 @@ public class NumberBlock : MonoBehaviour
         value = v;
 
         int spriteIndex = value == 0 ? 9 : value - 1;
-
-        blockImage.sprite = numberSprites[spriteIndex];
 
         Debug.Log(
             $"CREACIÓN | Valor guardado: {value} | " +
@@ -71,26 +76,58 @@ public class NumberBlock : MonoBehaviour
 
     public void DestroyGO()
     {
-        Destroy(gameObject);
-    }
 
-    IEnumerator DisappearAtTime()
-    {
-        yield return new WaitForSecondsRealtime(timeToDisappear);
-
-        Color startColor = gameObject.GetComponent<UnityEngine.UI.Image>().color;
+        Color startColor = image.color;
         Color endColor = startColor;
 
         startColor.a = 1f;
         endColor.a = 0f;
 
-        gameObject.GetComponent<UnityEngine.UI.Image>().color = startColor;
+        image.color = startColor;
+
+        animator.SetTrigger(BreakTrigger);
+        Tween.Custom(
+            startValue: startColor,
+            endValue: endColor,
+            duration: 0.4f,
+            onValueChange: newColor => image.color = newColor,
+            ease: Ease.InOutCubic
+        );
+        Tween.Scale(
+            transform,
+            endValue: new Vector3(2, 2, 2),
+            duration: 0.4f,
+            ease: Ease.InOutCubic
+            ).OnComplete(() =>
+            {
+                Destroy(gameObject);
+            });
+
+    }
+
+    public void DestroyAfterAnimation ()
+    {
+        Destroy(gameObject);
+    }
+
+
+    IEnumerator DisappearAtTime()
+    {
+        yield return new WaitForSecondsRealtime(timeToDisappear);
+
+        Color startColor = gameObject.GetComponent<Image>().color;
+        Color endColor = startColor;
+
+        startColor.a = 1f;
+        endColor.a = 0f;
+
+        gameObject.GetComponent<Image>().color = startColor;
 
         Tween.Custom(
             startValue: startColor,
             endValue: endColor,
             duration: 0.4f,
-            onValueChange: newColor => gameObject.GetComponent<UnityEngine.UI.Image>().color = newColor,
+            onValueChange: newColor => gameObject.GetComponent<Image>().color = newColor,
             ease: Ease.InOutCubic
         );
         Tween.Scale(
@@ -100,7 +137,7 @@ public class NumberBlock : MonoBehaviour
             ease: Ease.InOutCubic
             ).OnComplete(() =>
             {
-                DestroyGO();
+                Destroy(gameObject);
             });
     }
 }

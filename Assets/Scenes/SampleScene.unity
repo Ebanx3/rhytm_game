@@ -214,7 +214,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 481479109}
   - {fileID: 1631797850}
   - {fileID: 1648401234}
   m_Father: {fileID: 0}
@@ -235,6 +234,7 @@ GameObject:
   - component: {fileID: 360570096}
   - component: {fileID: 360570095}
   - component: {fileID: 360570097}
+  - component: {fileID: 360570098}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Controllers
   PointsScript: {fileID: 360570097}
-  blockGenerator: {fileID: 481479108}
+  blockGenerator: {fileID: 0}
   pressedKey: {fileID: 1631797851}
 --- !u!4 &360570096
 Transform:
@@ -286,56 +286,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Points
   points: 0
   PointsLabel: {fileID: 1648401235}
---- !u!1 &481479108
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 481479109}
-  - component: {fileID: 481479110}
-  m_Layer: 5
-  m_Name: BlocksGenerator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &481479109
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481479108}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 64216735}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 450}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &481479110
+--- !u!114 &360570098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481479108}
+  m_GameObject: {fileID: 360570094}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e34319ca86f05fc4f99695fa80d6697b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::BlockGenerator
   canvas: {fileID: 64216735}
-  numberPrefab: {fileID: 6330679483997507863, guid: d7fa8742dca9b164ba219db98e138787, type: 3}
+  numbersPrefabs:
+  - {fileID: 6330679483997507863, guid: d7fa8742dca9b164ba219db98e138787, type: 3}
+  - {fileID: 6330679483997507863, guid: 2407a6b3cc1707f478c3b5668cbf01c4, type: 3}
+  - {fileID: 6330679483997507863, guid: 1e6a4cf946607534ca950648b0ab2c6e, type: 3}
+  - {fileID: 6330679483997507863, guid: a32951e485beea946933a3cbf018bc2a, type: 3}
+  - {fileID: 6330679483997507863, guid: 34bd7dfca19d5a646aa9674678b84ae6, type: 3}
+  - {fileID: 6330679483997507863, guid: 6c14820f8fa9ce348acea1582101ab66, type: 3}
+  - {fileID: 6330679483997507863, guid: 19fb569282330e34f8e7d7702cec5705, type: 3}
+  - {fileID: 6330679483997507863, guid: 998403481da91544a848904e11655b43, type: 3}
+  - {fileID: 6330679483997507863, guid: bf74e92aeb5dc6c49b25d7e724dc6d2c, type: 3}
+  - {fileID: 6330679483997507863, guid: 3e00fe272c09f884299788e0c8f7cec9, type: 3}
   blockSpawnSpeed: 1.5
   blocks: []
 --- !u!1 &519420028

@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3093728125753672536
 RectTransform:
   m_ObjectHideFlags: 0
@@ -145,8 +145,9 @@ GameObject:
   - component: {fileID: 6289917842363712029}
   - component: {fileID: 2852012977046733658}
   - component: {fileID: 1006677792065944148}
+  - component: {fileID: 5660201732440374800}
   m_Layer: 5
-  m_Name: numberImg
+  m_Name: number3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6128299156075563123, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
+  m_Sprite: {fileID: -6110656803992641779, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -222,17 +223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9a65befb6d2704ba405bd5d62e08fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NumberBlock
-  numberSprites:
-  - {fileID: 6128299156075563123, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
-  - {fileID: 3386662938922423588, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
-  - {fileID: -6110656803992641779, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
-  - {fileID: 8553092956536608252, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
-  - {fileID: 6708733205153277002, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
-  - {fileID: 6813553822765877458, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
-  - {fileID: -5082647686934749709, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
-  - {fileID: -2423230811885516303, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
-  - {fileID: 1211998406744890917, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
-  - {fileID: 6155212226941906339, guid: 3eaa44df4545b5e47a4b5710d383a64f, type: 3}
   lockButton: {fileID: 3954254933904092216}
   timeToDisappear: 6
 --- !u!114 &1006677792065944148
@@ -249,3 +239,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnAnimation
   duration: 0.2
   initialScale: 0.3
+--- !u!95 &5660201732440374800
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6330679483997507863}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 73552619a9a930a4daafd3e62c62df49, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
